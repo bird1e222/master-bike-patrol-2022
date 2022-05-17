@@ -1,0 +1,28 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Drive",
+        "version": "v2",
+        "serviceId": "drive"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [
+      {
+        "menuName": "newLink",
+        "functionName": "newLink",
+        "defaultShortcut": "Ctrl+Alt+Shift+9"
+      },
+      {
+        "menuName": "Untitled macro",
+        "functionName": "Untitledmacro",
+        "defaultShortcut": "Ctrl+Alt+Shift+9"
+      }
+    ]
+  }
+}
