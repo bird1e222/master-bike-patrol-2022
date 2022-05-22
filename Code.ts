@@ -260,15 +260,19 @@ function getLinkTo() {
 
   // const linkToRange = sheet.getRange('AD3:AD45');
   // const linkToValues = linkToRange.getValues();
-  const hyperlinkRange = sheet.getRange('AC3:AC45');
+  const hyperlinkRange = sheet.getRange('hyperlinkToPatrolName');
   const hyperlinkValues = hyperlinkRange.getValues();
+  const hyperlinkPart1 = 'https://docs.google.com/spreadsheets/d/';
+  const hyperlinkTargetRange = sheet.getRange('hyperlinkTargetPatrol');
+  // const hyperlinkTargetRow = hyperlinkTargetRange.getRow();
+  const hyperlinkTargetCol = hyperlinkTargetRange.getColumn();
 
   for (const row in hyperlinkValues) {
     //    for (let col in hyperlinkValues[row]) {}
     hyperlinkValues[
       row
-    ][0] = `https://docs.google.com/spreadsheets/d/${ssID}/edit#gid=${sheetID}&range=${sheet
-      .getRange(Number(row) + 3, 30)
+    ][0] = `${hyperlinkPart1}${ssID}/edit#gid=${sheetID}&range=${sheet
+      .getRange(Number(row) + 3, hyperlinkTargetCol)
       .getA1Notation()}`;
   }
 
